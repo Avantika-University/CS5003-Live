@@ -25,7 +25,7 @@ IO_RUN_IMMEDIATE = 'IO_RUN_IMMEDIATE'
 STATE_RUNNING = 'RUNNING'
 STATE_READY = 'READY'
 STATE_DONE = 'DONE'
-STATE_WAIT = 'WAITING'
+STATE_WAIT = 'SUSPEND'
 
 # members of process structure
 PROC_CODE = 'code_'
@@ -82,7 +82,7 @@ class scheduler:
         proc_id = self.new_process()
         tmp = program_description.split(':')
         if len(tmp) != 2:
-            print('Bad description (%s): Must be number <x:y>' % program_description)
+            print('Not good description (%s): Must be number <x:y>' % program_description)
             print('  where X is the number of instructions')
             print('  and Y is the percent change that an instruction is CPU not IO')
             exit(1)
