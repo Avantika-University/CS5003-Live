@@ -1,0 +1,5 @@
+A final and important piece of the process creation API is the exec() system call This system call is useful when you want to run a program that is different from the calling program.
+
+For example, calling fork() in one is only useful if you want to keep running copies of the same program. However, often you want to run a different program; exec() does just that However, often you want to run a different program; exec() does just that
+
+In your example, the child process should calls execvp() in order to run the program wc, which is the word counting program. In fact, it runs wc on the source file papi.c, thus telling us how many lines, words, and bytes are found in the file
