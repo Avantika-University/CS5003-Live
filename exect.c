@@ -28,9 +28,9 @@ exit(1);
 
  char *myargs[3];
 
-myargs[0] = strdup("wc"); // program: "wc" (word count)
+myargs[0] = strdup(); 
 
- myargs[1] = strdup("papi.c"); // argument: file to count
+ myargs[1] = strdup(); 
 
 myargs[2] = NULL; // marks end of array
 
